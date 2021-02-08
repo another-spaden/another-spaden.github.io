@@ -1,0 +1,23 @@
+function selectSpeed() {
+    const selected_speed = document.form_speed.select_speed;
+    const index = selected_speed.selectedIndex;
+    const def_speed = selected_speed.options[index].value;
+    const max_speed = Math.round(def_speed * 1.1 * 100) / 100;
+    const min_speed = Math.round(def_speed * 0.9 * 100) / 100;
+    const first_message = "判定した速度は、「" + def_speed + "」です。";
+    const second_message = "最大値は、「" + max_speed + "」。";
+    const third_message = "最小値は、「" + min_speed + "」。";
+    document.getElementById("first_message").textContent = first_message;
+    document.getElementById("second_message").textContent = second_message;
+    document.getElementById("third_message").textContent = third_message;
+}
+
+window.onload = function addOptions() {
+    const select = document.getElementById("select_speed");
+    for (let i = 150; i <= 330; i++){
+        let option = document.createElement("option");
+        option.text = i;
+        option.value = i;
+        select.appendChild(option);
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>speed-judge</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="../js/speed-judge.js"></script>
+    <style>
+        body {
+            padding: 50px;
+            background: #000000;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="form-control">
+        <form name="form_speed">
+            <label for="select_speed">判定したい速度を選んでください→</label>
+            <select name="select_speed" id="select_speed">
+            </select>
+            <button type="button" onclick="selectSpeed()">実行！</button>
+        </form>
+    </div>
+    <br>
+    <font color="#f0f8ff"><p id="first_message"></p></font>
+    <font color="#db7093"><b><p id="second_message"></p></b></font>
+    <font color="#845bff"><b><p id="third_message"></p></b></font>
+</div>
+</body>
+</html>
