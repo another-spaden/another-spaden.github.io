@@ -30,6 +30,18 @@
             font-size: 200%;
             font-family: HG教科書体;
         }
+        select.select_speed{
+            width: 100%;
+            font-family: Century;
+        }
+        button.bt{
+            font-family: HG教科書体;
+            width: 100%;
+        }
+        label.lb{
+            width: 100%;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -38,10 +50,11 @@
     <br>
     <div class="form-control">
         <form name="form_speed">
-            <label for="select_speed">判定したい速度を選んでください→</label>
-            <select name="select_speed" id="select_speed">
+            <label for="select_speed" class="lb">判定したい速度を選んでください</label>
+            <br>
+            <select name="select_speed" id="select_speed" class="select_speed">
             </select>
-            <button type="button" onclick="selectSpeed()">実行！</button>
+            <button type="button" onclick="selectSpeed()" class="bt">実行！</button>
         </form>
     </div>
     <br>
