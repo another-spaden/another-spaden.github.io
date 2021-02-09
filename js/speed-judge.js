@@ -5,7 +5,7 @@ function selectSpeed() {
     const max_speed = Math.round(def_speed * 1.1 * 100) / 100;
     const min_speed = Math.round(def_speed * 0.9 * 100) / 100;
     const s_speed = Math.floor((max_speed / 0.9) + 1);
-    const k_speed = Math.floor((min_speed / 1.1) - 1);
+    const k_speed = Math.floor(min_speed / 1.1);
     const first_message = "判定した速度は、「" + def_speed + "」です。";
     const second_message = "最大値は、「" + max_speed + "」。";
     const third_message = "最小値は、「" + min_speed + "」。";
@@ -23,17 +23,13 @@ function selectSpeed() {
 window.onload = function addOptions() {
     const select = document.getElementById("select_speed");
     for (let i = 1; i <= 1000; i++) {
+        let option = document.createElement("option");
+        option.text = i;
+        option.value = i;
         if (i === 250) {
-            let option = document.createElement("option");
-            option.text = i;
-            option.value = i;
             option.selected = true;
-            select.appendChild(option);
-        } else {
-            let option = document.createElement("option");
-            option.text = i;
-            option.value = i;
-            select.appendChild(option);
         }
+        select.appendChild(option);
+
     }
 }
