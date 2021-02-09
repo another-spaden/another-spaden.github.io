@@ -1,4 +1,4 @@
-# This repository is for web-site [https://another-spaden.github.io]("another-spaden").
+# This repository is for [another-spaden](https://another-spaden.github.io/).
 ---
 ## Apps
 -[speed-judge](https://another-spaden.github.io/html/speed-judge.html)
