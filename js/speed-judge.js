@@ -22,7 +22,7 @@ function selectSpeed() {
 
 window.onload = function addOptions() {
     const select = document.getElementById("select_speed");
-    for (let i = 1; i <= 1000; i++) {
+    for (let i = 2; i <= 1000; i++) {
         let option = document.createElement("option");
         option.text = i;
         option.value = i;
